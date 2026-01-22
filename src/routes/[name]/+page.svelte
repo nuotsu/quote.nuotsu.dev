@@ -11,7 +11,7 @@
 	<link rel="preload" href="/Biro_Script_reduced.ttf" as="font" type="font/ttf" />
 </svelte:head>
 
-<header class="p-ch text-center">
+<header class="px-ch text-center">
 	<h1 class="text-xl">Howdy, <u class="relative font-handwritten leading-none">{name}</u>!</h1>
 </header>
 

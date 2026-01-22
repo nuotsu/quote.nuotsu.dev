@@ -11,4 +11,10 @@
 	<link rel="icon" href="https://fav.farm/🤑" />
 </svelte:head>
 
-<main class="flex min-h-dvh flex-col gap-ch">{@render children()}</main>
+<main class="flex min-h-dvh flex-col gap-ch p-ch">{@render children()}</main>
+
+<style>
+	main {
+		padding-bottom: max(1ch, env(safe-area-inset-bottom));
+	}
+</style>

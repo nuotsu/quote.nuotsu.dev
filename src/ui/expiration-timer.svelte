@@ -57,9 +57,9 @@
 	<time
 		class="inline-grid tabular-nums empty:hidden"
 		datetime={formatDateTime(expiration)}
-		title="Expires at {formatDateTime(expiration)}"
+		title="Offer expires at {formatDateTime(expiration)}"
 	>
-		<small class="text-[x-small] leading-none">Expires in</small>
+		<small class="text-[x-small] leading-none">Offer expires in</small>
 
 		{remaining}
 	</time>

@@ -5,7 +5,7 @@
 
 <section class="mx-auto max-w-7xl">
 	<div
-		class="grid snap-x snap-mandatory auto-cols-[min(var(--container-sm),80vw)] grid-flow-col gap-ch overflow-x-auto *:snap-start md:grid-cols-2"
+		class="grid snap-x snap-mandatory auto-cols-[min(var(--container-sm),80vw)] grid-flow-col gap-ch overflow-x-auto py-ch *:snap-start md:grid-cols-2"
 	>
 		<Tier
 			name="Option 1"
@@ -36,9 +36,3 @@
 		</ol>
 	</small>
 </footer>
-
-<style>
-	footer {
-		padding-bottom: max(1ch, env(safe-area-inset-bottom));
-	}
-</style>
