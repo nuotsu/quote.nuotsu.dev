@@ -7,9 +7,7 @@
 
 	let remaining = $state('24:00:00')
 
-	let timestamp = $derived(
-		browser && form?.success ? parseInt(localStorage.getItem(`discount:${form.code}`)!, 10) : null,
-	)
+	let timestamp = $state<number | null>(null)
 
 	function formatTime(ms: number): string {
 		if (ms <= 0) {
@@ -34,6 +32,17 @@
 
 	$effect(() => {
 		if (browser && form?.success) {
+			const key = `discount:${form.code}`
+			const stored = localStorage.getItem(key)
+
+			// If no stored timestamp, create one; otherwise use existing (no reset)
+			if (!stored) {
+				timestamp = form.timestamp
+				localStorage.setItem(key, form.timestamp.toString())
+			} else {
+				timestamp = parseInt(stored, 10)
+			}
+
 			updateTimer()
 			const interval = setInterval(updateTimer, 1000)
 
