@@ -18,9 +18,9 @@
 </script>
 
 <form action="?/discount" method="POST" use:enhance>
-	<fieldset class="flex items-end" disabled={form?.success}>
-		<label class="relative grid">
-			<small>Discount code</small>
+	<fieldset class="flex flex-wrap items-end" disabled={form?.success}>
+		<label class="relative grid grow">
+			<small>Discount code:</small>
 			<input
 				name="discount"
 				class="input text-center font-mono uppercase"
@@ -36,7 +36,8 @@
 				</div>
 			{/if}
 		</label>
-		<button class="action" type="submit">Apply</button>
+
+		<button class="action grow" type="submit">Apply</button>
 	</fieldset>
 
 	{#if form?.success}

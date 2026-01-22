@@ -6,15 +6,25 @@
 </script>
 
 <header class="text-center">
-	<h1>Howdy, <u>{name}</u>!</h1>
+	<h1 class="text-xl">Howdy, <u class="relative font-handwritten leading-none">{name}</u>!</h1>
 </header>
 
 <Everything />
 
 <style>
 	u {
+		pointer-events: none;
+		user-select: none;
+		display: inline-block;
 		text-decoration: none;
-		border-bottom: 1px solid;
-		padding-inline: 1ch;
+		padding-inline: 2ch;
+		font-size: 1.5em;
+
+		&::before {
+			content: '';
+			position: absolute;
+			inset: 0 0 0;
+			border-bottom: 1px solid;
+		}
 	}
 </style>

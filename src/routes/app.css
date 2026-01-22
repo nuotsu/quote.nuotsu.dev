@@ -1,6 +1,10 @@
+@import './fonts.css';
+
 @import 'tailwindcss';
 
 @theme {
+	--font-handwritten: 'Biro Script', cursive;
+
 	--color-background: #fff;
 	--color-foreground: #000;
 
@@ -31,13 +35,17 @@
 
 /* actions, intputs */
 
-@utility action {
+@utility action-base {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	@apply border border-foreground bg-foreground text-background;
+	padding: 0.25ch 1ch;
+}
+
+@utility action {
+	@apply action-base border border-foreground bg-foreground text-background;
 }
 
 @utility input {
-	@apply border px-ch;
+	@apply action-base border;
 }
