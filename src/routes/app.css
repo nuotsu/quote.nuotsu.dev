@@ -3,6 +3,9 @@
 @theme {
 	--color-background: #fff;
 	--color-foreground: #000;
+
+	--spacing-lh: 1lh;
+	--spacing-ch: 1ch;
 }
 
 @layer base {
@@ -12,7 +15,17 @@
 	}
 
 	s {
-		text-decoration-color: red;
+		position: relative;
+		text-decoration: none;
+
+		&::after {
+			content: '';
+			position: absolute;
+			inset: 50% -0.25ch auto;
+			translate: 0 -50%;
+			border-bottom: 2px solid red;
+			rotate: -5deg;
+		}
 	}
 }
 
@@ -26,5 +39,5 @@
 }
 
 @utility input {
-	@apply border;
+	@apply border px-ch;
 }

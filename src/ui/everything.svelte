@@ -10,20 +10,22 @@
 		<Tier
 			name="Option 1"
 			price={500}
-			features={['1 request per day', 'Basic support', "For when you're <em>kinda</em> serious"]}
+			description="For when you're <em>kinda</em> serious"
+			features={['1 request per day', 'Basic support']}
 		/>
 
 		<Tier
 			name="Option 2"
 			price={2000}
-			features={['Unlimited requests*', 'Priority support', 'For when you actually want a website']}
+			description="For when you actually want a website"
+			features={['Unlimited requests*', 'Priority support']}
 			badge="Best value!"
 			applyDiscount
 		/>
 	</div>
 
 	<footer class="mx-auto max-w-max">
-		<small class="text-[xx-small]">
+		<small class="text-[x-small]">
 			<ol>
 				<li>*1-year term (or until I get bored)</li>
 			</ol>

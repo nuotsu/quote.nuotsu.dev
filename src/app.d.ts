@@ -14,6 +14,7 @@ declare global {
 					message: string
 					percentage: number
 					code: string
+					timestamp: number
 			  }
 			| {
 					success: false
