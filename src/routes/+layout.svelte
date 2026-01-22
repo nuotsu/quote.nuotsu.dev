@@ -11,7 +11,7 @@
 	<link rel="icon" href="https://fav.farm/🤑" />
 </svelte:head>
 
-<main class="flex min-h-dvh flex-col gap-ch p-ch">{@render children()}</main>
+<main class="flex min-h-dvh flex-col gap-ch py-ch max-md:px-0 md:px-ch">{@render children()}</main>
 
 <style>
 	main {
