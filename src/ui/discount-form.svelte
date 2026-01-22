@@ -10,7 +10,7 @@
 		if (browser && form?.success) {
 			const key = `discount:${form.code}`
 
-			if (!localStorage.hasItem(key)) {
+			if (!localStorage.getItem(key)) {
 				localStorage.setItem(key, form.timestamp.toString())
 			}
 		}
