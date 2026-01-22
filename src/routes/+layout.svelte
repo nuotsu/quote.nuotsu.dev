@@ -1,0 +1,14 @@
+<script lang="ts">
+	import './app.css'
+
+	let { children } = $props()
+</script>
+
+<svelte:head>
+	<title>Let's build something great together | nuotsu.dev</title>
+	<meta name="description" content="Shall we collaborate? Get your quote now!" />
+
+	<link rel="icon" href="https://fav.farm/🤑" />
+</svelte:head>
+
+{@render children()}

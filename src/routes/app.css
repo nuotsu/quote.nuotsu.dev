@@ -1,0 +1,30 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-background: #fff;
+	--color-foreground: #000;
+}
+
+@layer base {
+	label,
+	button {
+		cursor: pointer;
+	}
+
+	s {
+		text-decoration-color: red;
+	}
+}
+
+/* actions, intputs */
+
+@utility action {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	@apply border border-foreground bg-foreground text-background;
+}
+
+@utility input {
+	@apply border;
+}
