@@ -5,7 +5,13 @@
 	let name = page.params.name
 </script>
 
-<header class="text-center">
+<svelte:head>
+	<title>{name}, let's build something great together | nuotsu.dev</title>
+	<link rel="preload" href="/Biro_Script_reduced.otf" as="font" type="font/otf" />
+	<link rel="preload" href="/Biro_Script_reduced.ttf" as="font" type="font/ttf" />
+</svelte:head>
+
+<header class="p-ch text-center">
 	<h1 class="text-xl">Howdy, <u class="relative font-handwritten leading-none">{name}</u>!</h1>
 </header>
 

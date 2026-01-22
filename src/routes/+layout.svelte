@@ -11,4 +11,4 @@
 	<link rel="icon" href="https://fav.farm/🤑" />
 </svelte:head>
 
-{@render children()}
+<main class="flex min-h-dvh flex-col gap-ch">{@render children()}</main>

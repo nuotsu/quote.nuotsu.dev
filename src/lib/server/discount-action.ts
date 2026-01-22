@@ -12,10 +12,7 @@ function parseDiscounts(discountsEnv: string): Map<string, number> {
 	for (const line of lines) {
 		const [code, percentageStr] = line.split('=')
 		const percentage = parseFloat(percentageStr)
-
-		if (code && !isNaN(percentage)) {
-			discountMap.set(code.toUpperCase(), percentage)
-		}
+		discountMap.set(code.toUpperCase(), percentage)
 	}
 
 	return discountMap
@@ -32,7 +29,22 @@ export async function handleDiscount({ request }: RequestEvent) {
 		return fail(400, {
 			success: false,
 			message: 'Invalid discount code',
+			timestamp: Date.now(),
 		})
+	}
+
+	// validation for FAMILY discount code
+	if (discountCode === 'FAMILY') {
+		const familySecret = formData.get('familySecret')?.toString()
+		const validSecrets = env.FAMILY_SECRET?.split(',').map((s) => s.trim()) || []
+
+		if (!familySecret || !validSecrets.includes(familySecret)) {
+			return fail(400, {
+				success: false,
+				message: 'Invalid answer',
+				timestamp: Date.now(),
+			})
+		}
 	}
 
 	const discountPercentage = discountCodes.get(discountCode)!

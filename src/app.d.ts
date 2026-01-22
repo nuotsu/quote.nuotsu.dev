@@ -12,13 +12,14 @@ declare global {
 			| {
 					success: true
 					message: string
+					timestamp: number
 					percentage: number
 					code: string
-					timestamp: number
 			  }
 			| {
 					success: false
 					message: string
+					timestamp: number
 			  }
 	}
 }
