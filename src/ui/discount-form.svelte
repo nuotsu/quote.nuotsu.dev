@@ -1,20 +1,9 @@
 <script lang="ts">
-	import { browser } from '$app/environment'
 	import { enhance } from '$app/forms'
 	import { page } from '$app/state'
 	import { Confetti } from 'svelte-confetti'
 
 	const form = $derived(page.form as App.DiscountFormResult | null)
-
-	$effect(() => {
-		if (browser && form?.success) {
-			const key = `discount:${form.code}`
-
-			if (!localStorage.getItem(key)) {
-				localStorage.setItem(key, form.timestamp.toString())
-			}
-		}
-	})
 </script>
 
 <form
