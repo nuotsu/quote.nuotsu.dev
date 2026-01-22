@@ -35,8 +35,8 @@ export async function handleDiscount({ request }: RequestEvent) {
 
 	// validation for FAMILY discount code
 	if (discountCode === 'FAMILY') {
-		const familySecret = formData.get('familySecret')?.toString()
-		const validSecrets = env.FAMILY_SECRET?.split(',').map((s) => s.trim()) || []
+		const familySecret = formData.get('familySecret')?.toString().trim().toLowerCase()
+		const validSecrets = env.FAMILY_SECRET?.split(',').map((s) => s.trim().toLowerCase()) || []
 
 		if (!familySecret || !validSecrets.includes(familySecret)) {
 			return fail(400, {
