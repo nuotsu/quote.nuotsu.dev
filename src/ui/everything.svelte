@@ -5,7 +5,7 @@
 
 <section class="mx-auto max-w-7xl">
 	<div
-		class="grid snap-x snap-mandatory auto-cols-[min(var(--container-sm),80vw)] grid-flow-col gap-ch py-ch *:snap-start max-md:-mx-ch max-md:overflow-x-auto max-md:pl-ch md:grid-cols-2"
+		class="grid snap-x snap-mandatory auto-cols-[min(var(--container-sm),80vw)] grid-flow-col gap-ch overflow-x-auto py-ch *:snap-start max-md:-mx-ch max-md:px-ch md:grid-cols-2"
 	>
 		<Tier
 			name="Option 1"
