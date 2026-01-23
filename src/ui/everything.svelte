@@ -5,7 +5,7 @@
 
 <section class="mx-auto max-w-7xl">
 	<div
-		class="grid snap-x snap-mandatory auto-cols-[min(var(--container-sm),80vw)] grid-flow-col gap-ch overflow-x-auto py-ch *:snap-start md:grid-cols-2"
+		class="grid snap-x snap-mandatory auto-cols-[min(var(--container-sm),80vw)] grid-flow-col gap-ch overflow-x-auto p-ch *:snap-center md:grid-cols-2"
 	>
 		<Tier
 			name="Option 1"
@@ -25,7 +25,7 @@
 	</div>
 </section>
 
-<aside class="mx-auto max-w-max">
+<aside class="mx-auto max-w-max px-ch">
 	<DiscountForm />
 </aside>
 

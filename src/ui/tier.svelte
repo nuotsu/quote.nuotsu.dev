@@ -25,9 +25,9 @@
 <article class="relative space-y-ch border p-ch">
 	<header>
 		{#if badge}
-			<em class="absolute top-0 right-ch inline-block -translate-y-1/2 bg-background px-ch"
-				>{badge}</em
-			>
+			<em class="absolute top-0 right-ch inline-block -translate-y-1/2 bg-background px-ch">
+				{badge}
+			</em>
 		{/if}
 
 		<h2>
